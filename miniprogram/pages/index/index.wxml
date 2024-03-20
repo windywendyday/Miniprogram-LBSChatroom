@@ -1,0 +1,24 @@
+<view class="infoContainer">
+    <!--用户信息-->
+    <image class="editIcon" src="cloud://lbschatroom-0gjko5o76144c24e.6c62-lbschatroom-0gjko5o76144c24e-1316859570/bianji.svg"></image>
+    <view class="userInfo">
+        <image class="avatar" src="{{userAvatar}}" ></image>
+        <view class="username">{{userNickname}}</view>
+        <view class="uid">@{{userSchoolID}}</view>
+    </view>
+    <!--菜单-->
+    <view class="optionmenu">
+        <view class="option" bindtap="toPasswordChange">
+            <image class="optionicon" src="/static/icons/settingicon.png"></image>
+            <text class="optiontext">修改密码</text>
+        </view>
+        <view class="option" bindtap="toAbout">
+            <image class="optionicon" src="/static/icons/abouticon.png"></image>
+            <text class="optiontext">关于产品&联系我们</text>
+        </view>
+        <view class="option" bindtap="toExit">
+            <image class="optionicon" src="/static/icons/exiticon.png"></image>
+            <text class="optiontext" bindtap="exitConfirm">退出登录</text>
+        </view>
+    </view>
+</view>

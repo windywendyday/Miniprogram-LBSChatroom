@@ -1,0 +1,31 @@
+<view class="chooseListContainer">
+    <view wx:if="{{chatroomList.length !== 0}}" class="historyRoomContainer">
+        <text class="roomTitle">历史聊天室🙋</text>
+        <view class="listItem">
+            <image class="chatroomCover" src="{{chatroomCover}}"></image>
+            <text class="chatroomName">{{chatroomName}}</text>
+            <button class="listButton" bindtap="toRoomDetail">选择</button>
+        </view>
+    </view>
+    <view class="nearbyRoomContainer">
+            <text class="roomTitle">附近的聊天室🔍</text>
+            <!-- <view class="listItem" wx:for="{{chatroomList}}">
+                <image class="chatroomCover" src="{{item.chatroomCover}}"></image>
+                <text class="chatroomName">{{item.chatroomName}}</text>
+                <button class="listButton">选择</button>
+            </view> -->
+            <view class="roomItem">
+                <image class="chatroomCover" src="cloud://lbschatroom-0gjko5o76144c24e.6c62-lbschatroom-0gjko5o76144c24e-1316859570/三里屯.svg"></image>
+                <text class="chatroomName">主图302</text>
+                <button class="listButton" bind:tap="toRoomDetail">选择</button>
+            </view>
+    </view>
+    <view class="mapContainer">
+        <map
+            longitude="{{curLongitude}}"
+            latitude="{{curLatitude}}"
+            scale="20"
+        ></map>
+    </view>
+    <text class="listEndText">-暂无更多聊天室-</text>
+</view>

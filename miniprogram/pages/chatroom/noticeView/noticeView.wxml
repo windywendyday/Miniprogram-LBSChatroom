@@ -1,0 +1,35 @@
+<view class="noticeContainer">
+    <view class="functionBar">
+
+    </view>
+    <view class="noticeContent">
+        <view class="noticeBox">
+            <text class="noticeType">寻物启事</text>
+            <view class="noticeTextArea">
+                <text class="noticeText">我丢了一只小狗，看到请联系：1881589603收到反馈舒服就跟疯了看丰功伟绩哦韩国分化瓦解卢浮宫和我姐夫革委会凤凰网</text>
+            </view>
+            <view class="timeTab">2022年10月9日</view>
+        </view>
+        <view class="noticeBox">
+            <text class="noticeType">寻物启事</text>
+            <view class="noticeTextArea">
+                <text class="noticeText">我丢了一只小狗，看到请联系：1881589603</text>
+            </view>
+            <view class="timeTab">2022年10月9日</view>
+        </view>
+        <view class="noticeBox">
+            <text class="noticeType">寻物启事</text>
+            <view class="noticeTextArea">
+                <text class="noticeText">我丢了一只小狗，看到请联系：1881589603收到反馈舒服就跟疯了看丰功伟绩哦韩国分化瓦解卢浮宫和我姐夫革委会凤凰网</text>
+            </view>
+            <view class="timeTab">2022年10月9日</view>
+        </view>
+        <view class="noticeBox">
+            <text class="noticeType">寻物启事</text>
+            <view class="noticeTextArea">
+                <text class="noticeText">我丢了一只小狗，看到请联系：1881589603收到反馈舒服就跟疯了看丰功伟绩哦韩国分化瓦解卢浮宫和我姐夫革委会凤凰网</text>
+            </view>
+            <view class="timeTab">2022年10月9日</view>
+        </view>
+    </view>
+</view>

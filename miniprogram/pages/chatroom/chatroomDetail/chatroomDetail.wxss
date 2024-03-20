@@ -1,0 +1,98 @@
+/* pages/chatroom/chatroom.wxss */
+.chatroomContainer{
+    display: flex;
+    flex-direction: column-reverse;
+    height: 100vh;
+}
+
+.msgContainer{
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+
+.bottomContainer{
+    display: flex;
+    flex-direction: column;
+    /* position: fixed; */
+    bottom: 0;
+    width: 100%;
+}
+
+.msgBox{
+    display: flex;
+    flex-direction: row;
+    margin-left: 20rpx;
+}
+.userAvatar{
+    border-radius: 50%;
+    height: 120rpx;
+    width: 120rpx;
+}
+.msgBubbleBox{
+    height: 36rpx;
+    padding: 20rpx;
+    margin-left: 28rpx;
+    margin-top: 20rpx;
+    background: #FFFCF1;
+    border-radius: 16rpx;
+    text-align: center;
+}
+.msgBubbleArea{
+    height: auto;
+    width: auto;
+    max-width: 400rpx;
+}
+
+.inputBarContainer{
+    background-color: #1D7155;
+    width: 100%;
+    height: 160rpx;
+    display: flex;
+    flex-direction: row;
+
+}
+.inputArea{
+    background-color: white;
+    width: 600rpx;
+    height: 50rpx;
+    margin: 30rpx 0 0 20rpx;
+    padding: 10rpx;
+    border-radius: 16rpx;
+}
+.icon{
+    width: 60rpx;
+    height: 60rpx;
+    margin: 32rpx 0 0 28rpx;
+}
+
+.moreMenu{
+    height: 400rpx;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.functionButton{
+    display: flex;
+    flex-direction: column;
+    margin: 50rpx;
+    align-items: center;
+}
+
+.functionButton image{
+    height: 96rpx;
+    width: 96rpx;
+}
+.functionButton text{
+    margin-top: 20rpx;
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 800rpx;
+    font-size: 24rpx;
+    /* identical to box height, or 14px */
+
+    /* 深绿1 */
+    color: #1A4033;
+
+}

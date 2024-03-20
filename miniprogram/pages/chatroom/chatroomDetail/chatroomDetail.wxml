@@ -1,0 +1,59 @@
+<!--pages/chatroom/chatroom.wxml-->
+<!--<view class="msgBox">-->
+<!--    <view class="avatar">-->
+<!--        <image class="userAvatar" src="/static/imgs/myavatar.JPG"></image>-->
+<!--    </view>-->
+<!--    <view class="msgBubbleBox">-->
+<!--        <view class="msgBubbleArea">-->
+<!--            <text class="text">你好, 先生jhksudfs户口都非常不俗传播艺术课程不是立刻就变成首开纪录</text>-->
+<!--        </view>-->
+<!--    </view>-->
+<!--</view>-->
+<view class="chatroomContainer">
+    <view class="test">
+        <view class="msgContainer">
+            <!-- <view class="msgBox" wx:for="{{conversations}}">
+                <view class="avatar">
+                    <image class="userAvatar" src="/static/imgs/myavatar.JPG"></image>
+                </view>
+                <view class="msgBubbleBox">
+                    <view class="msgBubbleArea">
+                        <text class="text">你好, 先生jhksudfs户口都非常不俗传播艺术课程不是立刻就变成首开纪录</text>
+                    </view>
+                </view>
+            </view> -->
+            <view class="msgBox">
+                <view class="avatar">
+                    <image class="userAvatar" src="{{avatar}}"></image>
+                </view>
+                <view class="msgBubbleBox">
+                    <view class="msgBubbleArea">
+                        <text class="text">你好, 先生</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="bottomContainer">
+            <view class="inputBarContainer">
+                <view class="inputArea">
+                    <input value="{{message}}" type="text" adjust-position="{{true}}" cursor-spacing="20" focus="{{true}}"></input>
+                </view>
+                <image class="icon" src="/static/icons/moreicon.png" bindtap="showMoreMenu"></image>
+            </view>
+            <view class="moreMenu" hidden="{{condition}}">
+                <view class="functionButton">
+                    <image src="/static/icons/imgUploadicon.png"></image>
+                    <text>上传图片</text>
+                </view>
+                <view class="functionButton">
+                    <image src="/static/icons/noticePosticon.png"></image>
+                    <text>发布公告</text>
+                </view>
+                <view class="functionButton">
+                    <image src="/static/icons/chatroomExiticon.png"></image>
+                    <text>退出聊天室</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
