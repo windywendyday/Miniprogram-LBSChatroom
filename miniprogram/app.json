@@ -1,7 +1,8 @@
 {
     "pages": [
-        "pages/chatroom/chatroomDetail/chatroomDetail",
         "pages/chatroom/chatroomChoose/chatroomChoose",
+        "pages/chatroom/chatroomDetail/chatroomDetail",
+        
         "pages/login&signup/signupFirstPage/signupFirstPage",
         "pages/login&signup/login/login",
         "pages/chatroom/noticeEdit/noticeEdit",
@@ -15,6 +16,10 @@
             "desc": "你的位置信息将用于匹配附近的聊天室" 
         }
     },
+    "requiredPrivateInfos":[
+        "getLocation",
+        "chooseLocation"
+    ],
     "requiredBackgroundModes": [
         "location"
     ],

@@ -20,11 +20,15 @@
                 <button class="listButton" bind:tap="toRoomDetail">选择</button>
             </view>
     </view>
+    <view class="positionSearch">
+        <button bind:tap="positionSearch">打开地图选择</button>
+        <view>定位不准确？尝试打开地图手动选择</view>
+    </view>
     <view class="mapContainer">
         <map
             longitude="{{curLongitude}}"
             latitude="{{curLatitude}}"
-            scale="20"
+            scale="18"
         ></map>
     </view>
     <text class="listEndText">-暂无更多聊天室-</text>

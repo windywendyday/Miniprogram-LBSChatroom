@@ -1,15 +1,15 @@
 // pages/chatroom/chatroomChoose/chatroomChoose.js
-const dbUser = wx.cloud.database().collection('userInfo')
-const dbChatroom = wx.cloud.database().collection('chatroom')  
 const app = getApp()
+const dbUser = wx.cloud.database().collection('userInfo')
+  
 Page({
     /**
      * 页面的初始数据
      */
     data: {
-        schoolID:'',
+        schoolID:'M202375536',
         isAuthorized:false,
-        roomID:'',
+        roomID:'1',
         curLatitude:'',
         curLongitude:'',
         chatroomName:'',
@@ -19,27 +19,14 @@ Page({
         minlng:'',
         maxlat:'',
         maxlng:'',
+        searchPosition:'',
+        isChooseManually: false
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
-        // wx.getSetting({
-        //     success:(res)=>{
-        //         if (!res.authSetting['scope.userLocation']) {
-        //             wx.authorize({
-        //               scope: 'scope.userLocation',
-        //               success () {
-        //                 console.log('用户已授权', this.scope)
-        //                 // 用户已经同意小程序使用位置获取功能，后续调用接口不会弹窗询问
-        //               },
-        //               fail(error){
-        //                   console.log(error)
-        //               }
-        //             })
-        //         }
-        //     }})
         let profile = JSON.parse(wx.getStorageSync('userProfile'));
         this.setData({
             schoolID: profile.data[0].schoolID
@@ -47,22 +34,37 @@ Page({
     },
 
     //获取当前位置
-    getCurrentLocation(){
-        dbUser.where({
-            schoolID:this.data.schoolID
-        }).get({
-            success: res => {
-                this.setData({
-                    curLongitude:res.data[0].curLongitude,
-                    curLatitude:res.data[0].curLatitude
-                })
-                console.log(this.data.curLongitude,this.data.curLatitude)
-            },fail: () => {
-                wx.showToast({
-                    title:'当前位置获取失败'
-                })
-            }
-        })
+    firstGetCurrentLocation(){
+        let that = this
+        if(!that.data.isChooseManually){
+            wx.getLocation({
+                type: 'wgs84',
+                success(res){
+                    that.setData({
+                        curLongitude:res.longitude,
+                        curLatitude:res.latitude
+                    })
+                    console.log('自动定位获取的地址为', that.data.curLatitude, that.data.curLongitude)
+                },
+                fail(){
+                    console.log('调用getLocation获取地理位置失败')
+                    dbUser.where({
+                        schoolID:that.data.schoolID
+                    }).get({
+                        success: res => {
+                            that.setData({
+                                curLongitude:res.data[0].curLongitude,
+                                curLatitude:res.data[0].curLatitude
+                            })
+                        },fail: () => {
+                            wx.showToast({
+                                title:'当前位置获取失败'
+                            })
+                        }
+                    })
+                }
+            })
+        }
         const { minlat, minlng, maxlat, maxlng } = this.getMaxMinLongitudeLatitude(this.data.curLongitude, this.data.curLatitude, 0.2)
         this.setData({
             minlat: minlat,
@@ -109,24 +111,36 @@ Page({
     },
 
     toRoomDetail(){
+        const { schoolID, roomID } = this.data
         wx.navigateTo({
             url:'/pages/chatroom/chatroomDetail/chatroomDetail',
             // +this.data.chatroomId+this.data.schoolID,
             success:function(res){
                 res.eventChannel.emit('getUserInfo',
                 { 
-                    schoolID:this.schoolID, 
-                    roomID:this.roomID
+                    schoolID: schoolID, 
+                    roomID: roomID
                 })
             }
         })
     },
-
-    //选择聊天室
-    // chooseChatroom(){
-    //     this.toRoomDetail()
-
-    // },
+    //选择地点
+    positionSearch(){
+        let that = this
+        wx.chooseLocation({
+            success(res){
+                that.setData({
+                    curLatitude:res.latitude,
+                    curLongitude:res.longitude,
+                    isChooseManually: true
+                })
+                console.log('接口调用成功',res)
+            },
+            fail(res){
+                console.log('接口调用失败', res)
+            }
+        })
+    },
 
     /**
      * 生命周期函数--监听页面初次渲染完成
@@ -139,7 +153,7 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow() {
-        this.getCurrentLocation()
+        this.firstGetCurrentLocation()
     },
 
     /**
@@ -153,6 +167,5 @@ Page({
      * 生命周期函数--监听页面卸载
      */
     onUnload() {
-
     },
 })

@@ -10,33 +10,35 @@
 <!--    </view>-->
 <!--</view>-->
 <view class="chatroomContainer">
-    <view class="test">
-        <view class="msgContainer">
-            <!-- <view class="msgBox" wx:for="{{conversations}}">
+    <scroll-view 
+        class="msgContainer" 
+        scroll-into-view="{{toView}}"
+        scroll-y
+        type="custom"
+        enable-flex
+        style="height: {{height}}rpx;"
+    >
+        <list-builder
+        list="{{conversations}}"
+        child-count="{{conversations.length}}"
+        child-height="100"
+        >
+            <view class="{{item.from === schoolID ? 'msgBox' : 'msgBoxOther'}}" wx:for="{{conversations}}" wx:key="{{item._id}}" id="item{{index}}">
                 <view class="avatar">
                     <image class="userAvatar" src="/static/imgs/myavatar.JPG"></image>
                 </view>
                 <view class="msgBubbleBox">
                     <view class="msgBubbleArea">
-                        <text class="text">你好, 先生jhksudfs户口都非常不俗传播艺术课程不是立刻就变成首开纪录</text>
-                    </view>
-                </view>
-            </view> -->
-            <view class="msgBox">
-                <view class="avatar">
-                    <image class="userAvatar" src="{{avatar}}"></image>
-                </view>
-                <view class="msgBubbleBox">
-                    <view class="msgBubbleArea">
-                        <text class="text">你好, 先生</text>
+                        <text class="text">{{item.message}}</text>
                     </view>
                 </view>
             </view>
-        </view>
-        <view class="bottomContainer">
+        </list-builder>
+    </scroll-view>
+    <view class="bottomContainer">
             <view class="inputBarContainer">
                 <view class="inputArea">
-                    <input value="{{message}}" type="text" adjust-position="{{true}}" cursor-spacing="20" focus="{{true}}"></input>
+                    <input value="{{value}}" type="text" adjust-position="{{true}}" cursor-spacing="20" focus="{{true}}" bindinput="handleInput" bindblur="handleBlur" bindconfirm="handleConfirm"></input>
                 </view>
                 <image class="icon" src="/static/icons/moreicon.png" bindtap="showMoreMenu"></image>
             </view>
@@ -54,6 +56,5 @@
                     <text>退出聊天室</text>
                 </view>
             </view>
-        </view>
     </view>
 </view>

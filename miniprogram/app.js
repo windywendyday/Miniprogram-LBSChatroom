@@ -12,8 +12,9 @@ App({
         env: 'lbschatroom-0gjko5o76144c24e',
         traceUser: true,
       });
+        
     }
-
     this.globalData = {};
   }
+  
 });
