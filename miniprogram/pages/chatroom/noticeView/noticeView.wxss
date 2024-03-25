@@ -1,0 +1,72 @@
+.noticeContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.noticeContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.noticeBox{
+    margin-top: 50rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 640rpx;
+    height: auto;
+    /* 浅黄1 */
+    background: #FFEECE;
+    /* 深黄1 */
+    border: 5rpx dashed #CC9C3D;
+    box-shadow: 2rpx 10rpx 16rpx rgba(0, 0, 0, 0.15);
+    border-radius: 16rpx;
+}
+
+.noticeType{
+    margin-top: 20rpx;
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 28rpx;
+    line-height: 115%;
+    /* identical to box height, or 16px */
+
+    text-align: center;
+    letter-spacing: 0.05em;
+
+    /* 深绿1 */
+    color: #1A4033;
+}
+.noticeTextArea{
+    margin: 20rpx;
+    width: 560rpx;
+    height: auto;
+}
+.noticeText{
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 800rpx;
+    font-size: 30rpx;
+    line-height: 115%;
+    /* identical to box height, or 14px */
+    /*text-align: center;*/
+    letter-spacing: 0.05em;
+    /* 灰2 */
+    color: #4C4C4C;
+}
+.timeTab{
+    margin-bottom: 30rpx;
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 800rpx;
+    font-size: 24rpx;
+    line-height: 115%;
+    /* identical to box height, or 14px */
+
+    letter-spacing: 0.05em;
+
+    /* 灰2 */
+    color: #4C4C4C;
+}

@@ -1,0 +1,17 @@
+<view class="noticePostContainer">
+    <view class="stepContainer">
+        <text class="noticePostTitle">Step1:请选择公告类型</text>
+        <mp-cells>
+            <mp-checkbox-group prop="radio" multi="{{false}}" bindchange="radioChange">
+                <mp-checkbox wx:for="{{radioItems}}" wx:key="value" label="{{item.name}}" value="{{item.value}}" checked="{{item.checked}}"></mp-checkbox>
+            </mp-checkbox-group>
+        </mp-cells>
+    </view>
+    <view class="stepContainer">
+        <text class="noticePostTitle">Step2:请输入具体内容（50字以内）</text>
+        <view class="noticeInput">
+            <input type="text" class="noticeInputArea"></input>
+        </view>
+    </view>
+    <button class="mainButton">确认发布</button>
+</view>

@@ -1,0 +1,85 @@
+/* pages/index/index.wxss */
+.editIcon{
+    position: fixed;
+    left: 680rpx;
+    top: 40rpx;
+    width: 40rpx;
+    height: 40rpx;
+}
+.infoContainer{
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*align-items: center;*/
+}
+.userInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.avatar{
+    border-radius: 50%;
+    margin-top: 100rpx;
+    margin-bottom: 50rpx;
+    height: 220rpx;
+    width: 220rpx;
+}
+.username{
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 34px;
+    margin-bottom: 20rpx;
+    /* identical to box height */
+
+    letter-spacing: 0.02em;
+
+    /* Black */
+
+    color: #1A0700;
+}
+
+.uid{
+    font-family: 'Red Hat Display';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    letter-spacing: 0.02em;
+
+    /* Gray 1 */
+
+    color: #9D9693;
+}
+.optionmenu{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 50rpx;
+}
+.option{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 20rpx 0 20rpx 20rpx;
+}
+
+.optionicon{
+    width: 100rpx;
+    height: 100rpx;
+    margin-left: 70rpx;
+}
+.optiontext{
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 800rpx;
+    font-size: 36rpx;
+    line-height: 50rpx;
+    letter-spacing: 0.02em;
+    margin-left: 30rpx;
+
+    /* Black */
+
+    color: #1A0700;
+
+}

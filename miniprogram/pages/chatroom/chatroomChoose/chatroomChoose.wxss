@@ -1,0 +1,96 @@
+.chooseListContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.historyRoomContainer{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 60rpx;
+}
+
+.nearbyRoomContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.roomTitle{
+    margin: 30rpx 40rpx;
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 800rpx;
+    font-size: 28rpx;
+    line-height: 100%;
+    /* identical to box height, or 14px */
+
+    /* 深绿1 */
+    color: #1A4033;
+
+}
+.listItem{
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 700rpx;
+    height: 180rpx;
+    background-color: white;
+    border-radius: 30rpx;
+}
+.roomItem{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.chatroomCover{
+    margin: 20rpx 0 20rpx 20rpx;
+    width: 100rpx;
+    height: 100rpx;
+}
+.chatroomName{
+    width: 300rpx;
+    padding-left: 42rpx;
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 500rpx;
+    font-size: 28rpx;
+    line-height: 100%;
+    margin: auto;
+    /* or 14px */
+    color: #000000;
+}
+.listButton{
+    width: 120rpx;
+    height: 60rpx;
+    background: #F4C243;
+    border-radius: 20rpx;
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28rpx;
+
+    /* 深绿1 */
+    color: #1A4033;
+}
+
+.listEndText{
+    margin-top: 80rpx;
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 100%;
+    /* identical to box height, or 12px */
+
+    text-align: center;
+    letter-spacing: -0.02em;
+    /* 灰5 */
+
+    color: #999997;
+}
+.mapContainer map{
+    width: 100%;
+    height: 360rpx;
+    margin-top: 30rpx;
+    margin-bottom: 10rpx;
+}

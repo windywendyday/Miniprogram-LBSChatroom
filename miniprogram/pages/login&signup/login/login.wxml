@@ -1,0 +1,35 @@
+<!--pages/login.wxml-->
+<view class="loginContainer">
+    <!--欢迎文字-->
+    <view class="welcomeContainer">
+        <view class="backgroundBar"></view>
+        <text class="welcomeText">Hi,欢迎来到聊天室</text>
+    </view>
+
+    <!--表单输入框-->
+    <view class="loginInfoInputContainer">
+        <text class="inputText">请输入你的学号邮箱</text>
+        <view class="loginInput">
+            <input type="text"
+                   data-type="schoolID"
+                   id="schoolID"
+                   bindinput="handleInput"></input>
+            <text class="emailStr">@hust.com</text>
+        </view>
+        <text class="inputText">请输入你的密码</text>
+        <view class="loginInput">
+            <input type="password"  data-type="password"
+                   id="password"
+                   bindinput="handleInput"></input>
+        </view>
+    </view>
+
+    <!-- 登录按钮-->
+    <view class="signupButton">
+        <button class="mainButton" bindtap="login">登录</button>
+    </view>
+
+    <!--转到注册页面提示文字-->
+    <view class="toSignupStr" bindtap="toSignup">没有账户？点此注册</view>
+
+</view>

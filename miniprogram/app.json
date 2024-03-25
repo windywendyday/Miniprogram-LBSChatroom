@@ -1,0 +1,55 @@
+{
+    "pages": [
+        "pages/chatroom/chatroomChoose/chatroomChoose",
+        "pages/chatroom/chatroomDetail/chatroomDetail",
+        
+        "pages/login&signup/signupFirstPage/signupFirstPage",
+        "pages/login&signup/login/login",
+        "pages/chatroom/noticeEdit/noticeEdit",
+        "pages/index/index",
+        "pages/passwordChange/passwordChange",
+        "pages/login&signup/signupSecondPage/signupSecondPage",
+        "pages/chatroom/noticeView/noticeView"
+    ],
+    "permission": {
+        "scope.userLocation": {
+            "desc": "你的位置信息将用于匹配附近的聊天室" 
+        }
+    },
+    "requiredPrivateInfos":[
+        "getLocation",
+        "chooseLocation"
+    ],
+    "requiredBackgroundModes": [
+        "location"
+    ],
+    "window": {
+        "navigationBarBackgroundColor": "#1D7155",
+        "navigationBarTitleText": "聊天室",
+        "navigationBarTextStyle": "white"
+    },
+    "tabBar": {
+        "backgroundColor": "#1D7155",
+        "color": "#FFFFFF",
+        "selectedColor": "#F4C243",
+        "list": [
+            {
+                "pagePath": "pages/chatroom/chatroomChoose/chatroomChoose",
+                "text": "聊天室",
+                "iconPath": "/static/icons/tabBar/聊天室-未选中.png",
+                "selectedIconPath": "/static/icons/tabBar/聊天室-选中.png"
+            },
+            {
+                "pagePath": "pages/index/index",
+                "text": "我的",
+                "iconPath": "/static/icons/tabBar/我的-未选中.png",
+                "selectedIconPath": "/static/icons/tabBar/我的-选中.png"
+            }
+        ]
+    },
+    "sitemapLocation": "sitemap.json",
+    "useExtendedLib": {
+        "kbone": true,
+        "weui": true
+      }
+}

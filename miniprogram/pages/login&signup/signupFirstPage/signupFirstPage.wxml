@@ -1,0 +1,29 @@
+<!--pages/signupFirstPage/signupFirstPage.wxml-->
+<view class="signupContainer">
+    <!--欢迎文字-->
+    <view class="welcomeContainer">
+        <view class="backgroundBar"></view>
+        <text class="welcomeText">Hi,欢迎来到聊天室</text>
+    </view>
+
+    <!--表单框-->
+    <view class="schoolIDInputContainer">
+        <text class="inputText">请输入你的学号邮箱</text>
+        <view class="loginInput">
+            <input type="text"
+                   data-type="schoolID"
+                   id="schoolID"
+                   bindinput="handleInput"></input>
+            <text class="emailStr">@hust.com</text>
+        </view>
+    </view>
+
+    <!--按钮-->
+    <view class="sendCaptchaButton">
+        <button class="mainButton" bindtap="sendCaptcha">发送验证码</button>
+    </view>
+
+    <!--跳转文字-->
+    <view class="toLoginStr" bindtap="toLogin">已有账户？点此登录</view>
+
+</view>

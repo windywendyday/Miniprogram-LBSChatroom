@@ -1,0 +1,19 @@
+{
+    "navigationBarTitleText": "xx聊天室",
+    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#ffffff",
+    "backgroundColor": "#F8F7F4",
+    "usingComponents": {},
+    "name": "werun-websocket",
+    "version": "1.0.0",
+    "description": "Simple websocket sample in Node",
+    "main": "chatroomDetail.js",
+    "scripts": {
+        "start": "node chatroomDetail.js"
+    },
+    "enablePullDownRefresh ": false, 
+    "disableScroll":false,
+    "dependencies": {
+        "nodejs-websocket": "^1.7.2"
+  }
+}
