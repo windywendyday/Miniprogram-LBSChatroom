@@ -14,7 +14,7 @@
     flex-direction: column;
 }
 
-.roomTitle{
+.title{
     margin: 30rpx 40rpx;
     font-family: 'PingFang SC';
     font-style: normal;
@@ -68,24 +68,22 @@
     font-style: normal;
     font-weight: bold;
     font-size: 28rpx;
-
     /* 深绿1 */
     color: #1A4033;
 }
 
 .listEndText{
-    margin-top: 80rpx;
+    margin-top: 60rpx;
+    margin-bottom: 60rpx;
     font-family: 'PingFang SC';
     font-style: normal;
     font-weight: 300;
     font-size: 12px;
     line-height: 100%;
-    /* identical to box height, or 12px */
 
     text-align: center;
     letter-spacing: -0.02em;
     /* 灰5 */
-
     color: #999997;
 }
 .mapContainer map{
@@ -93,4 +91,25 @@
     height: 360rpx;
     margin-top: 30rpx;
     margin-bottom: 10rpx;
+}
+
+.positionSearch{
+    display: flex;
+    flex-direction: column;
+}
+.positionSearch button{
+    width: 280rpx;
+    height: 60rpx;
+    background-color:#F4C243;
+    color: #1A4033;
+    border-radius: 20rpx;
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28rpx;
+    margin-top: 30rpx;
+}
+.positionSearch text{
+    font-size: 26rpx;
+    color: darkgrey;
 }

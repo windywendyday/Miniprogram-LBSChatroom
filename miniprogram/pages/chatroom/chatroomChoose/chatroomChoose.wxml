@@ -8,7 +8,7 @@
         </view>
     </view>
     <view class="nearbyRoomContainer">
-            <text class="roomTitle">附近的聊天室🔍</text>
+            <text class="title">附近的聊天室🔍</text>
             <!-- <view class="listItem" wx:for="{{chatroomList}}">
                 <image class="chatroomCover" src="{{item.chatroomCover}}"></image>
                 <text class="chatroomName">{{item.chatroomName}}</text>
@@ -19,17 +19,21 @@
                 <text class="chatroomName">主图302</text>
                 <button class="listButton" bind:tap="toRoomDetail">选择</button>
             </view>
+            <text class="listEndText">-暂无更多聊天室-</text>
     </view>
-    <view class="positionSearch">
-        <button bind:tap="positionSearch">打开地图选择</button>
-        <view>定位不准确？尝试打开地图手动选择</view>
-    </view>
+    
     <view class="mapContainer">
+        <text class="title">当前位置📍</text>
         <map
             longitude="{{curLongitude}}"
             latitude="{{curLatitude}}"
             scale="18"
         ></map>
     </view>
-    <text class="listEndText">-暂无更多聊天室-</text>
+
+    <view class="positionSearch">
+        <text>定位不准确？尝试打开地图手动选择</text>
+        <button bind:tap="positionSearch">打开地图选择</button>
+    </view>
+    
 </view>
